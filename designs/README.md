@@ -108,7 +108,7 @@ The "Data processing type" field shows that the overwhelming majority of RISC-V 
 
 ## Classification tree
 
-<img width="2000" height="807" alt="Class/classification_tree.png" />
+<img width="2000" height="807" alt="Classification tree" src="results/classification_tree.png" />
 
 ## Core synthesis
 
