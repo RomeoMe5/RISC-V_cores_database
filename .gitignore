@@ -1,0 +1,4 @@
+venv/
+designs/*/runs/
+__pycache__/
+

@@ -1,8 +1,31 @@
-Ссылка на README.md проекта:
+# RISC-V cores database
 
-https://github.com/RomeoMe5/RISC-V_cores_database/blob/master/designs/README.md
+The repository contains a catalog of 100 open-source RISC-V processor core
+implementations (18 attributes per core), their classification, and the
+results of a comparative synthesis of 15 cores on the open PDKs sky130A and
+gf180mcuC using OpenLane 2.
 
-Ниже приведено краткое описание открытой платформы автоматизированного проектирования интегральных схем OpenLane, которая использовалась в проекте.
+Project structure:
+
+- `designs/README.md` — project description: database, classification,
+  tables and analysis of the synthesis results;
+- `designs/results/` — results database:
+  - `sky130A_metrics/*.csv` (15 files) and `gf180mcuC_metrics/*.csv` (13 files)
+    — all metrics of each run (93 columns, including the run configuration
+    and run tag);
+  - `metrics_summary.csv` — summary table for all 28 runs;
+  - `RISC-V_cores_database.xlsx` — catalog of 100 cores;
+  - `classification_tree.pdf` — classification tree;
+- `designs/<core>/` — RTL source files and flow configurations
+  (`config.json`, or `config.tcl` for ibex and serv) of the synthesized cores;
+- `run_designs.py` — script for batch running of the flow over all designs.
+
+The repository is a fork of OpenLane 2 (rev e56eac03, pinned in
+`flake.nix`/`flake.lock`). Below is the description of the OpenLane platform
+used in the project.
+
+---
+
 
 <h1 align="center">OpenLane</h1>
 <p align="center">
@@ -80,4 +103,3 @@ If you use OpenLane in your research, please cite the following paper.
 Docker images distributed by Efabless Corporation under the same license.
 
 Binaries in OpenLane distributions may fall under stricter open source licenses.
-
